@@ -1,0 +1,3 @@
+C:/Users/WDS/Documents/programcionC/Eliminar/cmake-build-debug/CMakeFiles/pruba_semillero.dir
+C:/Users/WDS/Documents/programcionC/Eliminar/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/WDS/Documents/programcionC/Eliminar/cmake-build-debug/CMakeFiles/rebuild_cache.dir
