@@ -4,21 +4,30 @@
 # include <stdlib.h>
 # include <windows.h>
 
-#include "Reprint.h"
+#include "Anulacion.h"
 # include "Transaccion.h"
 
 extern ttransaccion *inicio;
 
+int Validar_ultimo (const char *pan){
+	int leng = strlen (pan);
+    char ultimo [5];
+    char prueba [5];
+    printf ("Me puedes regalar los ultimos 4 numeros del pan \n");
+    scanf ("%s",ultimo);
 
+     for (int i = leng -5; i <= leng; i++){
+       strcat (prueba, &pan[i]);
+     }
 
-int Validar_ultimo (){
-
-}
+     printf("%s",prueba);
+ 	return 0;
+ }
 
 void Anulacion(){
   int refe;
   char numero [5];
-  char pan_aux[20];
+
   ttransaccion *aux = inicio;
   if ( !vacio ()){
       printf ("Me puedes decir el numero de referencia de la transaccion");
@@ -31,7 +40,9 @@ void Anulacion(){
           fgets (numero , sizeof(numero ), stdin);
           numero [strcspn (numero, "\n")] = 0;
 
+         if ( !Validar_ultimo (aux->Pan)) {
 
+         }
         }
         aux = aux->next;
       }

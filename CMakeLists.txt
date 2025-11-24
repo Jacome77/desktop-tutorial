@@ -3,4 +3,4 @@ project(eliminar C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(pruba_semillero main.c Transaccion.c Reprint.c)
+add_executable(pruba_semillero main.c Transaccion.c Reprint.c Anulacion.c)

@@ -127,9 +127,9 @@ int Validar_fecha( const char *date)
       strcpy(year, date[3]);
       strcpy(year, date[4]);
 
-      dato2 = atoi(day);
+      dato2 = atoi(year);
 
-      if ( (dato1 > 0 && dato1 < 13) && (dato2 > 0 && dato2 < 32))
+      if ( (dato1 > 0 && dato1 < 13) && (dato2 > 24))
       {
         return 1 ;
       }

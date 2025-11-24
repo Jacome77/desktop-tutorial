@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/WDS/Documents/programcionC/Eliminar/cmake-build-debug"
+			"value" : "c:/Users/WDS/Documents/estudio programacion java,pythn,c/Repo de github/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -431,7 +431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/WDS/Documents/programcionC/Eliminar/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/WDS/Documents/estudio programacion java,pythn,c/Repo de github/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -503,7 +503,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/WDS/Documents/programcionC/Eliminar"
+			"value" : "C:/Users/WDS/Documents/estudio programacion java,pythn,c/Repo de github"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1147,7 +1147,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/WDS/Documents/programcionC/Eliminar/cmake-build-debug"
+			"value" : "C:/Users/WDS/Documents/estudio programacion java,pythn,c/Repo de github/cmake-build-debug"
 		},
 		{
 			"name" : "eliminar_IS_TOP_LEVEL",
@@ -1171,7 +1171,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/WDS/Documents/programcionC/Eliminar"
+			"value" : "C:/Users/WDS/Documents/estudio programacion java,pythn,c/Repo de github"
 		}
 	],
 	"kind" : "cache",

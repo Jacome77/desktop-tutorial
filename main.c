@@ -6,6 +6,7 @@
 
 #include "Transaccion.h"
 #include "Reprint.h"
+#include "Anulacion.h"
 
 
 void menu();
@@ -47,6 +48,8 @@ int main ()
                 Flow_Buy();
                 break;
             case 2:
+                printf("Quieres volver al menu principal S o N \n");
+                Anulacion();
                 break;
             case 3:
                 break;
