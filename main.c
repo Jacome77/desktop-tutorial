@@ -48,7 +48,7 @@ int main ()
                 Flow_Buy();
                 break;
             case 2:
-                printf("Quieres volver al menu principal S o N \n");
+                Clean();
                 Anulacion();
                 break;
             case 3:

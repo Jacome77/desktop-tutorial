@@ -113,24 +113,25 @@ int Validar_fecha( const char *date)
     return 0 ;
   }
 
-  printf("Numero de tamaño de fecha %i", len);
+
   if (len ==5)
   {
     if (isdigit(date[0]) && isdigit(date[1]) && isdigit(date[3]) && isdigit(date[4]))
     {
       int dato1, dato2;
-      strcpy(day, date[0]);
-      strcpy(day, date[1]);
+      strcat(day, &date[0]);
+      strcat(day, &date[1]);
 
       dato1 = atoi(day);
 
-      strcpy(year, date[3]);
-      strcpy(year, date[4]);
+      strcat(year, &date[3]);
+      strcat(year, &date[4]);
 
       dato2 = atoi(year);
 
-      if ( (dato1 > 0 && dato1 < 13) && (dato2 > 24))
+      if ( dato1 > 0 && dato1 < 13 && dato2 > 24)
       {
+        printf("paso por aca");
         return 1 ;
       }
 

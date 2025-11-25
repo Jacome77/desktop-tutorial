@@ -9,16 +9,21 @@
 
 extern ttransaccion *inicio;
 
-int Validar_ultimo (const char *pan){
+int Validar_ultimo (const char *pan,  char ultimocuatro){
 	int leng = strlen (pan);
-    char ultimo [5];
-    char prueba [5];
-    printf ("Me puedes regalar los ultimos 4 numeros del pan \n");
-    scanf ("%s",ultimo);
+  char prueba [5];
 
-     for (int i = leng -5; i <= leng; i++){
+     for (int i = leng -5; i < leng; i++){
        strcat (prueba, &pan[i]);
      }
+
+  printf("d%c \n",ultimocuatro);
+  printf("d%c \n",prueba);
+    if (strcmp (ultimocuatro, prueba) == 0)
+    {
+      printf("Numeros correctos \n");
+      return 1;
+    }
 
      printf("%s",prueba);
  	return 0;
@@ -26,28 +31,33 @@ int Validar_ultimo (const char *pan){
 
 void Anulacion(){
   int refe;
-  char numero [5];
+  int numero [5];
 
   ttransaccion *aux = inicio;
   if ( !vacio ()){
       printf ("Me puedes decir el numero de referencia de la transaccion");
       scanf("%d",&refe);
-      while (aux->next != NULL){
-
+    while (getchar() != '\n');
+      while (aux != NULL){
+        printf("%d",refe);
         if (aux->referncia == refe){
 
           printf("Dime los ultimos 4 digitos de la tarjeta \n");
           fgets (numero , sizeof(numero ), stdin);
           numero [strcspn (numero, "\n")] = 0;
-
-         if ( !Validar_ultimo (aux->Pan)) {
-
-         }
+          if (Validar_ultimo (aux->Pan, numero))
+          {
+            printf("Numeros correctos \n");
+          }
+          printf("Numeros mal 1 \n");
+        }else
+        {
+          printf("No existe ese numero de referencia\n");
+          Sleep(2000);
         }
         aux = aux->next;
       }
-      printf("No existe ese numero de referencia\n");
-      Sleep(2000);
+
    }else {
        printf ("No existe ninguna transaccion \n");
        Sleep(1500);
