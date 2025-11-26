@@ -150,6 +150,23 @@ int Validar_fecha( const char *date)
   return 0 ;
 }
 
+int FranquiciaEmisora(ttransaccion *aux)
+{
+  char fra = aux->Pan[0];
+  if (fra == '5')
+  {
+    strcpy(aux->franquicia,"Mastercard");
+    return 1;
+  }else if (fra == '4')
+  {
+    strcpy(aux->franquicia,"VISA");
+    return 1;
+  }else
+  {
+    return 0;
+  }
+}
+
 
 
 void Flow_Buy (){
@@ -181,6 +198,13 @@ void Flow_Buy (){
   {
     Sleep(2000);
     printf("Error en la trasnaccion \n" );
+    return ;
+  }
+
+  if (!FranquiciaEmisora(aux))
+  {
+    Sleep(11000);
+    printf("Franquicia no existe \n" );
     return ;
   }
   aux->Monto = Validar_monto(monto);
