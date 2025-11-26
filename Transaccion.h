@@ -16,3 +16,4 @@ void Flow_Buy();
 int validar_numero(const char *val);
 int  Validar_monto(const char *monto);
 int  vacio ();
+void clean();

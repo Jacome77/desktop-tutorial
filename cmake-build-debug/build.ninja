@@ -73,6 +73,12 @@ build CMakeFiles/pruba_semillero.dir/Anulacion.c.obj: C_COMPILER__pruba_semiller
   OBJECT_DIR = CMakeFiles\pruba_semillero.dir
   OBJECT_FILE_DIR = CMakeFiles\pruba_semillero.dir
 
+build CMakeFiles/pruba_semillero.dir/Cierre.c.obj: C_COMPILER__pruba_semillero_unscanned_Debug C$:/Users/WDS/Documents/estudio$ programacion$ java,pythn,c/Repo$ de$ github/Cierre.c || cmake_object_order_depends_target_pruba_semillero
+  DEP_FILE = CMakeFiles\pruba_semillero.dir\Cierre.c.obj.d
+  FLAGS = -g -std=gnu99 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\pruba_semillero.dir
+  OBJECT_FILE_DIR = CMakeFiles\pruba_semillero.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target pruba_semillero
@@ -81,7 +87,7 @@ build CMakeFiles/pruba_semillero.dir/Anulacion.c.obj: C_COMPILER__pruba_semiller
 #############################################
 # Link the executable pruba_semillero.exe
 
-build pruba_semillero.exe: C_EXECUTABLE_LINKER__pruba_semillero_Debug CMakeFiles/pruba_semillero.dir/main.c.obj CMakeFiles/pruba_semillero.dir/Transaccion.c.obj CMakeFiles/pruba_semillero.dir/Reprint.c.obj CMakeFiles/pruba_semillero.dir/Anulacion.c.obj
+build pruba_semillero.exe: C_EXECUTABLE_LINKER__pruba_semillero_Debug CMakeFiles/pruba_semillero.dir/main.c.obj CMakeFiles/pruba_semillero.dir/Transaccion.c.obj CMakeFiles/pruba_semillero.dir/Reprint.c.obj CMakeFiles/pruba_semillero.dir/Anulacion.c.obj CMakeFiles/pruba_semillero.dir/Cierre.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\pruba_semillero.dir

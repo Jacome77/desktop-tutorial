@@ -27,6 +27,19 @@ int Cantidad_Transaccion ()
   return ref;
 }
 
+void clean ()
+{
+  ttransaccion *aux = inicio;
+  ttransaccion *aux2;
+  while (aux != NULL)
+  {
+    aux2 = aux;
+    aux = aux->next;
+    free(aux2);
+  }
+  inicio = NULL;
+}
+
 int Validar_pan(const char *pan){
   int par = 0;
   int suma ;
