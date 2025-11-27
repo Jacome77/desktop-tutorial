@@ -144,7 +144,6 @@ int Validar_fecha( const char *date)
 
       if ( dato1 > 0 && dato1 < 13 && dato2 > 24)
       {
-        printf("paso por aca");
         return 1 ;
       }
 
@@ -201,6 +200,7 @@ void Flow_Buy (){
   {
     Sleep(2000);
     printf("Error en la trasnaccion \n" );
+    printf("Numero de pan incorrecto \n" );
     return ;
   }
   strcpy(aux->Pan, pan);
@@ -226,8 +226,9 @@ void Flow_Buy (){
   cvv[strcspn(cvv, "\n")] = 0;
   if (!Validar_cvv(cvv))
   {
-    Sleep(2000);
+    Sleep(1000);
     printf("Error en la trasnaccion \n" );
+    printf("Numero de cvv mal \n" );
     return ;
   }
   aux->CVV = atoi(cvv);
@@ -248,7 +249,7 @@ void Flow_Buy (){
   inicio = aux;
 
   printf("Transaccion correcta  \n ");
-  Sleep(3000);
+  Sleep(1000);
 
 
 }

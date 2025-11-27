@@ -18,11 +18,11 @@ void Imprimir (){
         printf("----------------------------------------------------------------------------------------\n");
         while (aux != NULL){
 
-            printf("%-15i %-15.2f %-20s  %-10s\n",
+            printf("%-15i %-15.2f %-20s %-20s %-10s\n",
                     aux->referncia,
                     aux->Monto,
                     aux->Pan,
-                    //aux->franquicia,
+                    aux->franquicia,
                     aux->estado == 0 ? "VENTA" : "ANULADA");
 
             aux = aux->next;

@@ -1,3 +1,3 @@
 
 void Anulacion();
-int Validar_ultimo (const char *pan, char Ultimoncuatro);
+int Validar_ultimo (const char *pan, int Ultimoncuatro);

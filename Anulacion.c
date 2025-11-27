@@ -9,29 +9,35 @@
 
 extern ttransaccion *inicio;
 
-int Validar_ultimo (const char *pan,  char ultimocuatro){
+int Validar_ultimo (const char *pan, int ultimocuatro){
 	int leng = strlen (pan);
-  char prueba [5];
+   char prueba [5];
 
-     for (int i = leng -5; i < leng; i++){
+     for (int i = leng -4; i < leng-3; i++){
        strcat (prueba, &pan[i]);
      }
 
-  printf("d%c \n",ultimocuatro);
-  printf("d%c \n",prueba);
-    if (strcmp (ultimocuatro, prueba) == 0)
+
+  printf("%i\n",ultimocuatro);
+  int compara = atoi(prueba);
+  printf("%i\n",compara);
+  Sleep(2000);
+    if (compara == ultimocuatro)
     {
+      Sleep(1000);
       printf("Numeros correctos \n");
       return 1;
+    }else
+    {
+      printf("Numeros incorrectos \n");
+      Sleep(1000);
     }
-
-     printf("%s",prueba);
  	return 0;
  }
 
 void Anulacion(){
   int refe;
-  int numero [5];
+  int numero;
 
   ttransaccion *aux = inicio;
   if ( !vacio ()){
@@ -40,13 +46,13 @@ void Anulacion(){
     while (getchar() != '\n');
       while (aux != NULL){
         printf("%d",refe);
-        if (aux->referncia == refe){
+        if (aux->referncia == refe && aux->estado == 0){
 
           printf("Dime los ultimos 4 digitos de la tarjeta \n");
-          fgets (numero , sizeof(numero ), stdin);
-          numero [strcspn (numero, "\n")] = 0;
+          scanf("%d",&numero);
           if (Validar_ultimo (aux->Pan, numero))
           {
+            aux->estado = 1;
             printf("Numeros correctos \n");
           }
           printf("Numeros mal 1 \n");

@@ -7,7 +7,7 @@
 #include "Transaccion.h"
 #include "Reprint.h"
 #include "Anulacion.h"
-
+#include "Cierre.h"
 
 void menu();
 void Clean();
@@ -30,7 +30,6 @@ int Validar_numero(const char *op)
 int main ()
 {
     char Opcion_respuesta [2+1];
-    int respuesta;
 
     while (1)
     {
@@ -52,14 +51,16 @@ int main ()
                 Anulacion();
                 break;
             case 3:
+                Clean ();
+                Close();
                 break;
             case 4:
                 Clean();
                 char Repu [3];
+                Imprimir();
                 do
                 {
-                    Imprimir();
-                    Sleep(3000);
+                    Sleep(1000);
                     printf("Quieres volver al menu principal S o N \n");
                     scanf("%c", &Repu );
 
