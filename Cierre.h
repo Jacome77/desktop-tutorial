@@ -1,1 +1,2 @@
 void Close();
+void imprimir();

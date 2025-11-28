@@ -56,16 +56,7 @@ int main ()
                 break;
             case 4:
                 Clean();
-                char Repu [3];
                 Imprimir();
-                do
-                {
-                    Sleep(1000);
-                    printf("Quieres volver al menu principal S o N \n");
-                    scanf("%c", &Repu );
-
-                }while (strcmp(Repu, "S") == 0 || strcmp(Repu, "s") == 0);
-
                 break;
             case 5:
                 break;

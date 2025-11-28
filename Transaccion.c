@@ -64,7 +64,9 @@ int Validar_pan(const char *pan){
    if (suma %10 == 0){
      return 1;
    }
+  printf("Error\n");
    return 0;
+
 }
 int  Validar_monto(const char *monto)
 {
@@ -246,6 +248,10 @@ void Flow_Buy (){
   aux->estado = 0;
   aux->referncia = Cantidad_Transaccion();
   aux->next= inicio;
+  if (inicio != NULL)
+  {
+    inicio->back = aux;
+  }
   inicio = aux;
 
   printf("Transaccion correcta  \n ");
